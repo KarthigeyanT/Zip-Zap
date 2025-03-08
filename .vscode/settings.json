@@ -1,0 +1,9 @@
+{
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "MutableAI.upsell": false,
+    "cSpell.words": [
+        "allprojects"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

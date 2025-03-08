@@ -1,0 +1,27 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+// Uncomment the following line if you need to set a custom build directory
+// rootProject.buildDir = new File(rootDir, "../build").absolutePath
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            // Uncomment the following line if you need to set a custom build directory for subprojects
+            // project.android.buildDir = new File(rootProject.buildDir, project.name).absolutePath
+        }
+    }
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

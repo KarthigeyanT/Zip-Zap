@@ -1,0 +1,59 @@
+name: quick_commerce_app
+description: A quick commerce mobile application
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  video_player: ^2.2.10
+  gif: ^2.3.0
+
+  # Firebase dependencies
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.6.0
+
+  # Carousel Slider
+  carousel_slider: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/splashbackground/
+    - assets/fonts/
+
+  fonts:
+    - family: ProductSans
+      fonts:
+        - asset: assets/fonts/ProductSans-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/ProductSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/ProductSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/ProductSans-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/ProductSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/ProductSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/ProductSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/ProductSans-Black.ttf
+          weight: 900
+        - asset: assets/fonts/ProductSans-BlackItalic.ttf
+          weight: 900
+          style: italic
