@@ -14,8 +14,15 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('lib/assets/splashbackground/zipzap.mp4')
+    _controller = VideoPlayerController.asset('assets/splashbackground/zipzap.mp4')
+
       ..initialize().then((_) {
+        setState(() {});
+        _controller.play();
+      }).catchError((error) {
+        // Handle error during video initialization
+        print("Error initializing video: $error");
+
         setState(() {});
         _controller.play();
       });

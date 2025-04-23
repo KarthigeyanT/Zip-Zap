@@ -5,5 +5,7 @@
     "cSpell.words": [
         "allprojects"
     ],
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "bitoAI.codeCompletion.enableAutoCompletion": false,
+    "java.format.settings.url": "eclipse-formatter.xml"
 }

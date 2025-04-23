@@ -1,38 +1,46 @@
+// android/app/build.gradle
+
 plugins {
-    id "com.android.application"
-    id 'com.google.gms.google-services' // Firebase configuration
-    id "kotlin-android" // Kotlin support
-    id "dev.flutter.flutter-gradle-plugin" // Flutter Gradle Plugin
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'dev.flutter.flutter-gradle-plugin'
 }
 
 android {
-    namespace = "com.example.quick_commerce_app"
-    compileSdk = 34 // Use the latest compile SDK version
+    namespace 'com.example.quick_commerce_app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.quick_commerce_app"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
-    }
-
-    defaultConfig {
-        applicationId = "com.example.quick_commerce_app"
-        minSdk = 23 // Set minimum SDK version to 23
-        targetSdk = 34 // Use the latest target SDK version
-        versionCode = 1 // Update version code as needed
-        versionName = "1.0" // Update version name as needed
+        jvmTarget = '17'
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.debug // Use debug signing config for release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+}
+
 flutter {
-    source = "../.."
+    source '../..'
 }
